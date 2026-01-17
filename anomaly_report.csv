@@ -1,0 +1,10 @@
+state,district,Enrolments,Updates,UER,Youth_Ratio,Child_Dependency,UER_ZScore,Is_Anomaly
+Rajasthan,Khairthal-Tijara,0.0,1072.0,1072.0,,,24.534982934467873,True
+Rajasthan,Kotputli-Behror,0.0,536.0,536.0,,,11.958468862036696,True
+Telangana,Medchal?malkajgiri,2.0,1206.0,402.0,1.0,1.0,8.814340343928901,True
+Rajasthan,Beawar,1.0,518.0,259.0,1.0,1.0,5.45903901490342,True
+Rajasthan,Balotra,1.0,509.0,254.5,1.0,1.0,5.353452609444576,True
+Rajasthan,Didwana-Kuchaman,2.0,728.0,242.66666666666666,1.0,2.0,5.075799469163912,True
+Rajasthan,Phalodi,0.0,206.0,206.0,,,4.215465795054814,True
+Daman & Diu,Daman,9.0,1789.0,178.9,1.0,8.0,3.5796009977359993,True
+Maharashtra,Ahilyanagar,13.0,2435.0,173.92857142857142,1.0,12.0,3.4629531593243237,True
