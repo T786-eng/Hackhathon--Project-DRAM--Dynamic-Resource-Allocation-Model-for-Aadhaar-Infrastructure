@@ -289,7 +289,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Team
 
 **Project**: DRAM (Dynamic Resource Allocation Model)  
-**Hackathon**: UIDAI Innovation Challenge 2025  
+**Hackathon**: UIDAI Innovation Challenge 2026  
 **Category**: Data Analytics & Predictive Modeling
 
 **Team Members**:
