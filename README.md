@@ -268,7 +268,10 @@ project-dram/
 
 ## 📚 Documentation
 
-- 📄 **Full Documentation**: [Project-DRAM-Dynamic-Resource-Allocation-Model-UIDAI-Hackathon-2026.pdf](docs/DRAM_Documentation.pdf)
+- 📄 **Full Documentation**: [## Project Documentation
+Click below to view the full project report and technical methodology:
+
+[📄 View Full Project DRAM Documentation](./Project-DRAM-Dynamic-Resource-Allocation-Model-UIDAI-Hackathon-2026.pdf)](docs/DRAM_Documentation.pdf)
 - 📊 **Methodology**: Detailed explanation of UER metric and classification logic
 - 🎓 **Use Cases**: Infrastructure planning, budget allocation, capacity forecasting
 
