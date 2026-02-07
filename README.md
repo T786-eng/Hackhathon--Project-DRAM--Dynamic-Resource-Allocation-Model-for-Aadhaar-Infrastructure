@@ -315,7 +315,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For questions, suggestions, or collaboration opportunities:
 
 - 📧 Email: [shaikhtohid921@gmail.com]
-- 🔗 LinkedIn: [www.linkedin.com/in/tohid-shaikh-79b251226]
+- 🔗 LinkedIn: [www.linkedin.com/in/shaikh-tohid]
 
 ---
 
