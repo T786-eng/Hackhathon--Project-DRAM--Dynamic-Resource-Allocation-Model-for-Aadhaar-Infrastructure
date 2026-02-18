@@ -88,7 +88,9 @@ Check Outputs
 * 🖥️ Console output with live key findings and infrastructure gap analysis.
 
 
-📁 Project Structure:
+## 📁 Project Structure
+
+```text
 project-dram/
 │
 ├── main.py                      # Main analysis engine
@@ -111,10 +113,10 @@ project-dram/
     ├── api_data_aadhar_enrolment_*.csv
     ├── api_data_aadhar_demographic_*.csv
     └── api_data_aadhar_biometric_*.csv
+```
 
 
-📈 Sample Findings (Console Output):
-
+📈 Sample Findings (Console Output)
 =======================================================================
    PROJECT DRAM v2.0 - Dynamic Resource Allocation Model
    UIDAI Hackathon: Unlocking Societal Trends in Aadhaar Data
@@ -122,7 +124,7 @@ project-dram/
 
 [STEP 1] Ingesting Multi-Source Data...
    ✓ Found 12 Data sources | Loaded ~5,000,000 records
-   
+
 [STEP 5] Classifying Districts into Strategic Zones...
    ✓ Classification Complete:
       • RED (High Priority): 90 districts
