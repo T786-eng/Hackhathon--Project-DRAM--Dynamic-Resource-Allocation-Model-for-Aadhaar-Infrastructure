@@ -1,59 +1,26 @@
 # Project DRAM: Dynamic Resource Allocation Model
-
-
 > **Unlocking Societal Trends in Aadhaar Enrolment and Updates**
 
-A data-driven solution for optimizing Aadhaar infrastructure deployment across India by identifying demand patterns, detecting anomalies, and predicting future resource needs.
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge.svg)](https://mcowodyfqqwzvh2h5bn5sr.streamlit.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+
+Project DRAM is a data-driven intelligence solution designed to optimize Aadhaar infrastructure deployment across India. By analyzing millions of transaction records, it identifies demand patterns, detects statistical anomalies, and predicts future resource requirements using the **Updates-to-Enrolment Ratio (UER)**.
 
 ---
 
-## 🎯 Problem Statement
-
-**UIDAI Hackathon Challenge**: Identify meaningful patterns, trends, anomalies, or predictive indicators and translate them into clear insights or solution frameworks that can support informed decision-making and system improvements.
-
----
-
-## 💡 Our Solution
-
-Project DRAM analyzes national Aadhaar transaction data to discover three distinct district demand profiles using the innovative **Updates-to-Enrolment Ratio (UER)** metric. This enables data-driven infrastructure allocation instead of uniform deployment.
-
-### Key Innovation: The UER Metric
-
-```
-UER = (Demographic Updates + Biometric Updates) / Total Enrolments
-```
-
-This simple ratio reveals whether a district needs enrolment capacity, update services, or both.
+## 🚀 Live Deployment
+Access the interactive intelligence dashboard here:  
+🔗 **[Live Dashboard Link](https://mcowodyfqqwzvh2h5bn5sr.streamlit.app/)**
 
 ---
 
-## 🔍 What We Discovered
+## 🏗️ Project Architecture
 
-### ✅ Patterns Identified
-- **Three Natural Clusters**: Districts fall into RED (update-heavy), YELLOW (balanced), or GREEN (enrolment-focused) zones
-- **Clear Separation**: Log-scale analysis proves these are statistically distinct groups
-
-### 📈 Trends Revealed
-- **Demographic Correlation**: Youth ratio inversely correlates with UER (younger populations = lower update demand)
-- **State-Level Variations**: Significant differences between urban and rural state patterns
-- **Infrastructure Gaps**: Many high-UER districts lack adequate update centers
-
-### 🚨 Anomalies Detected
-- **Statistical Outliers**: Z-score analysis identifies districts with unusual demand patterns
-- **Service Quality Flags**: Extreme values indicate potential infrastructure or data issues
-
-### 🔮 Predictive Indicators
-- **Zone Transitions**: Forecasts which districts will shift demand profiles in 3-5 years
-- **Capacity Planning**: Predicts future infrastructure needs based on demographics
-
----
-
-## 🏗️ Architecture
-
-```
+```text
 ┌─────────────────────┐
-│   Input Data        │
-│  (3 CSV Sources)    │
+│    Input Data       │
+│   (3 CSV Sources)   │
 └──────┬──────────────┘
        │
        ▼
@@ -79,78 +46,55 @@ This simple ratio reveals whether a district needs enrolment capacity, update se
 │  - 4 CSV Reports    │
 │  - Console Insights │
 └─────────────────────┘
-```
+## ✨ Key Features
 
----
+* ✅ **Pattern Discovery**: Identifies three distinct district demand clusters (**Red/Yellow/Green**).
+* ✅ **Anomaly Detection**: Statistical outlier flagging using Z-scores to identify system stress.
+* ✅ **Demographic Insights**: Deep dive into Youth ratio and child dependency analysis.
+* ✅ **Predictive Modeling**: Forecasts zone transitions for long-term strategic planning.
+* ✅ **Professional Visualizations**: 5 publication-ready graphs (300 DPI) for reporting.
+* ✅ **Comprehensive Reports**: 4 detailed CSV files for stakeholders and administrators.
+* ✅ **Scalable**: Optimized to handle national-scale datasets with millions of rows.
 
-## 📊 Key Features
+## 🚀 Usage & Deployment
 
-- ✅ **Pattern Discovery**: Identifies three distinct district demand clusters
-- ✅ **Anomaly Detection**: Statistical outlier flagging using Z-scores
-- ✅ **Demographic Insights**: Youth ratio and child dependency analysis
-- ✅ **Predictive Modeling**: Forecasts zone transitions for strategic planning
-- ✅ **Professional Visualizations**: 5 publication-ready graphs (300 DPI)
-- ✅ **Comprehensive Reports**: 4 CSV files for different stakeholders
-- ✅ **Scalable**: Handles national-scale datasets efficiently
+### Data Preparation
+Place your source data files in the project directory (or any subfolder):
+* `api_data_aadhar_enrolment*.csv`
+* `api_data_aadhar_demographic*.csv`
+* `api_data_aadhar_biometric*.csv`
 
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-```bash
-# Python 3.7 or higher
-python --version
-
-# Required libraries
-pip install pandas matplotlib seaborn scipy numpy
-```
-
-### Installation
-
-```bash
-# Install dependencies
-pip install pandas matplotlib seaborn scipy numpy
-```
-
-Or if you have a requirements.txt file:
-```bash
-pip install -r requirements.txt
-```
-
-### Usage
-
-1. **Place your data files** in the project directory (or any subfolder):
-   - `api_data_aadhar_enrolment*.csv`
-   - `api_data_aadhar_demographic*.csv`
-   - `api_data_aadhar_biometric*.csv`
-
-2. **Run the analysis**:
+### Execution
+1. **Install Dependencies**:
    ```bash
-   python run_project_dram.py
+   pip install -r requirements.txt
    ```
 
-3. **Check outputs**:
-   - 📊 5 PNG visualizations in the current directory
-   - 📁 4 CSV reports for detailed analysis
-   - 🖥️ Console output with key findings
+2. **Run the Analysis:**
+   ```bash
+   python main.py
+   ```
 
-### Expected Runtime
+3. **Launch the Dashboard:**
+   ```bash
+   streamlit run app.py
+   ```
 
-- Small dataset (< 100 districts): ~10 seconds
-- Full national dataset (600+ districts): ~30-60 seconds
+Check Outputs
+* 📊 5 PNG visualizations in the root directory.
 
----
+* 📁 4 CSV reports (final_district_classification.csv, anomaly_report.csv, etc.).
 
-## 📁 Project Structure
+* 🖥️ Console output with live key findings and infrastructure gap analysis.
 
-```
+
+📁 Project Structure:
 project-dram/
 │
-├── run_project_dram.py          # Main analysis script
+├── main.py                      # Main analysis engine
+├── app.py                       # Streamlit Dashboard script
 ├── requirements.txt             # Python dependencies
-├── README.md                    # This file
+├── README.md                    # Project Documentation
 │
 ├── Outputs/                     # Generated files
 │   ├── 1_top_red_districts.png
@@ -163,108 +107,48 @@ project-dram/
 │   ├── state_level_trends.csv
 │   └── executive_summary.csv
 │
-└── Data/                        # Input CSV files (not included)
+└── Data/                        # Input CSV files (UIDAI Dataset)
     ├── api_data_aadhar_enrolment_*.csv
     ├── api_data_aadhar_demographic_*.csv
     └── api_data_aadhar_biometric_*.csv
-```
-
----
 
 
-## 📈 Sample Output
-
-### Console Output
-
-```
+📈 Sample Findings (Console Output):
 =======================================================================
    PROJECT DRAM v2.0 - Dynamic Resource Allocation Model
    UIDAI Hackathon: Unlocking Societal Trends in Aadhaar Data
 =======================================================================
 
 [STEP 1] Ingesting Multi-Source Data...
-   ✓ Found 3 Enrolment files
-   ✓ Found 3 Demographic files
-   ✓ Found 3 Biometric files
-   ✓ Loaded 125,450 enrolment records
+   ✓ Found 12 Data sources | Loaded ~5,000,000 records
    
 [STEP 5] Classifying Districts into Strategic Zones...
    ✓ Classification Complete:
-      • RED: Express Update Hub: 127 districts (19.8%)
-      • YELLOW: Hybrid Center: 312 districts (48.8%)
-      • GREEN: Enrolment Van: 201 districts (31.4%)
+      • RED (High Priority): 90 districts
+      • YELLOW (Balanced): 717 districts
+      • GREEN (Enrolment): 325 districts
 
-🔴 TOP 5 PRIORITY DISTRICTS (Immediate Action Required):
-   1. Thane, Maharashtra
-      UER: 156.3 | Youth Ratio: 18.45% | Stable RED zone
+🔴 TOP 5 PRIORITY DISTRICTS (Critical Action Required):
+   1. Khairthal-Tijara, Rajasthan (UER: 1072.0)
+   2. Kotputli-Behror, Rajasthan (UER: 536.0)
    [...]
-```
 
-### Visualizations
-
-<table>
-  <tr>
-    <td><img src="sample_outputs/1_top_red_districts.png" width="400"/></td>
-    <td><img src="sample_outputs/2_zone_distribution.png" width="400"/></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Top Priority Districts</b></td>
-    <td align="center"><b>Zone Distribution</b></td>
-  </tr>
-  <tr>
-    <td><img src="sample_outputs/3_enrolments_vs_updates.png" width="400"/></td>
-    <td><img src="sample_outputs/5_demographic_insights.png" width="400"/></td>
-  </tr>
-  <tr>
-    <td align="center"><b>Cluster Analysis</b></td>
-    <td align="center"><b>Demographic Insights</b></td>
-  </tr>
-</table>
-
-
-
-
----
-
-## 🎯 Impact & Results
-
-### Quantifiable Benefits
-
-- ⏱️ **30-40% reduction** in average wait times (estimated)
-- 💰 **25-35% cost savings** through targeted deployment
-- 📍 **100% data coverage** - analyzes all districts systematically
-- 🎯 **Statistical rigor** - identifies outliers with 99% confidence
-
-### Decision Support Outputs
-
-| Output File | Purpose | Audience |
-|-------------|---------|----------|
-| `final_district_classification.csv` | Complete database | Strategic planners |
-| `anomaly_report.csv` | Urgent cases | Operations team |
-| `state_level_trends.csv` | State summaries | State coordinators |
-| `executive_summary.csv` | Key metrics | Leadership |
-
----
 
 ## 🔧 Technical Details
 
-### Technologies Used
+* **Language**: Python 3.11+
+* **Data Processing**: Pandas, NumPy
+* **Statistical Analysis**: SciPy (Z-score calculations)
+* **Visualization**: Plotly, Matplotlib, Seaborn
+* **Deployment**: Streamlit Community Cloud
 
-- **Language**: Python 3.7+
-- **Data Processing**: Pandas, NumPy
-- **Statistical Analysis**: SciPy (Z-score calculations)
-- **Visualization**: Matplotlib, Seaborn
-- **Data Format**: CSV (scalable to millions of rows)
+### Key Algorithms & Logic
+* **UER Calculation**: Aggregates biometric/demographic updates vs enrolments.
+* **Z-Score Anomaly Detection**: Identifies statistical outliers (|Z| > 2.5).
+* **Rule-Based Classification**: Dynamic three-tier system (RED/YELLOW/GREEN).
+* **Predictive Logic**: Forecasts zone transitions based on current Youth Ratio and UER growth.
 
-### Key Algorithms
 
-1. **UER Calculation**: Aggregates updates and enrolments at district level
-2. **Z-Score Anomaly Detection**: Identifies statistical outliers (|Z| > 2.5)
-3. **Rule-Based Classification**: Three-tier system (RED/YELLOW/GREEN)
-4. **Demographic Analysis**: Youth ratio and child dependency metrics
-5. **Predictive Logic**: Forecasts zone transitions based on demographics
-
----
 
 ## 📚 Documentation
 
@@ -304,9 +188,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **UIDAI** for providing the hackathon opportunity and inspiring data-driven governance
-- **Digital India Initiative** for the vision of technology-enabled public services
-- **Open Source Community** for the excellent Python libraries that made this analysis possible
+- **UIDAI** for providing the hackathon opportunity and inspiring data-driven governance.
+- **Digital** India Initiative for the vision of technology-enabled public services.
+- **Open Source Community** for the excellent Python libraries used.
 
 ---
 
@@ -325,10 +209,3 @@ If you find this project useful or interesting, please consider giving it a ⭐ 
 
 ---
 
-<div align="center">
-
-**Built with 🇮🇳 for Digital India**
-
-*Empowering Data-Driven Decisions for 1.3 Billion Aadhaar Holders*
-
-</div>
