@@ -19,7 +19,6 @@ The system is fully deployed and accessible here:
 ## 🏗️ System Architecture
 
 
-
 The system follows a modular, three-tier architecture designed for sub-millisecond query performance:
 1. **Data Engine**: Robust ingestion layer with validation for multi-source CSV datasets.
 2. **Analysis Layer**: Vectorized computation of UER and SciPy-based Z-Score anomaly detection.
@@ -54,9 +53,9 @@ project-dram/
 └── Data/                        # Input CSV files (UIDAI Dataset)
     ├── api_data_aadhar_enrolment_*.csv
     └── api_data_aadhar_biometric_*.csv
+```
 
-
-📈 Sample System Output (Terminal)
+## 📈 Sample System Output (Terminal)
 =======================================================================
    PROJECT DRAM v2.0 - Dynamic Resource Allocation Model
    UIDAI Hackathon: Unlocking Societal Trends in Aadhaar Data
@@ -70,67 +69,57 @@ project-dram/
    ✓ Classification Complete:
       • RED (Critical Hub): 90 districts
       • YELLOW (Hybrid): 717 districts
+```
 
+## 🚀 Usage & Deployment
 
+### 1. Data Preparation
+Place your raw UIDAI source data files into the `Data/` directory:
+* `api_data_aadhar_enrolment*.csv`
+* `api_data_aadhar_biometric*.csv`
 
+### 2. Execution
+Follow these steps to initialize the analysis engine and launch the dashboard:
 
----
-🚀 Usage & Deployment:
-1. Data Preparation
-Place your source data files in the Data/ directory:
-
-api_data_aadhar_enrolment*.csv
-
-api_data_aadhar_biometric*.csv
-
-2. Execution:
-# Install Dependencies
+```bash
+# Install required Python dependencies
 pip install -r requirements.txt
 
-# Run the Analysis Engine
+# Execute the OOP-based Analysis Engine to generate artifacts
 python main.py
 
-# Launch the Dashboard
+# Launch the interactive Streamlit Dashboard
 streamlit run app.py
+
+
+## 🔧 Technical Details
+
+* **Runtime**: Python 3.11+
+* **Core Engine**: Pandas, NumPy, SciPy (Z-score calculation)
+* **Visualizations**: Plotly (Sunburst & Interactive Scatter), Seaborn
+* **UI Architecture**: Streamlit (2026 Width-Stretch UI Architecture)
+
+
+## 🧠 Key Algorithms & Logic
+
+* **UER Calculation**: Aggregates biometric and demographic updates against total enrolments to determine service demand.
+* **Z-Score Anomaly Detection**: Utilizes statistical modeling to identify outliers where $|Z| > 2.5$, flagging districts with extreme infrastructure stress.
+* **Rule-Based Classification**: Implements a dynamic three-tier system (**RED**, **YELLOW**, **GREEN**) to categorize districts for strategic resource allocation.
+
 ---
 
+## 👥 Team & Acknowledgments
 
-🔧 Technical Details
-Runtime: Python 3.11+
+* **Hackathon**: UIDAI Innovation Challenge 2026
+* **Category**: Data Analytics & Predictive Modeling
+* **Shaikh Mohammad Tohid**: Lead Software Engineer & Data Analyst ([shaikhtohid921@gmail.com](mailto:shaikhtohid921@gmail.com))
+* **Solanki Rushikumar**: Research & Documentation Lead
 
-Core: Pandas, NumPy, SciPy (Z-score calculation)
-
-Visuals: Plotly (Sunburst & Interactive Scatter), Seaborn
-
-UI: Streamlit (2026 Width-Stretch UI Architecture)
 ---
 
+## 📧 Contact
 
-Key Algorithms & Logic:
-UER Calculation: Aggregates biometric/demographic updates vs enrolments.
-Z-Score Anomaly Detection: Identifies statistical outliers (|Z| > 2.5).
-Rule-Based Classification: Dynamic three-tier system (RED/YELLOW/GREEN).
----
+* **Email**: [shaikhtohid921@gmail.com]
 
+> ⭐ **Star This Repository** if you find this project useful for data-driven governance!
 
-
-👥 Team & Acknowledgments
-Hackathon: UIDAI Innovation Challenge 2026
-
-Category: Data Analytics & Predictive Modeling
-
-Shaikh Mohammad Tohid - Lead Software Engineer & Data Analyst 
-
-Solanki Rushikumar - Research & Documentation Lead
----
-
-
-
-📧 Contact
-
-📧 Email: [shaikhtohid921@gmail.com]
----
-
-
-⭐ Star This Repository if you find this project useful for data-driven governance!
----
