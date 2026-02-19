@@ -71,6 +71,10 @@ project-dram/
       • RED (Critical Hub): 90 districts
       • YELLOW (Hybrid): 717 districts
 
+
+
+
+---
 🚀 Usage & Deployment:
 1. Data Preparation
 Place your source data files in the Data/ directory:
@@ -88,6 +92,7 @@ python main.py
 
 # Launch the Dashboard
 streamlit run app.py
+---
 
 
 🔧 Technical Details
@@ -98,11 +103,16 @@ Core: Pandas, NumPy, SciPy (Z-score calculation)
 Visuals: Plotly (Sunburst & Interactive Scatter), Seaborn
 
 UI: Streamlit (2026 Width-Stretch UI Architecture)
+---
+
 
 Key Algorithms & Logic:
 UER Calculation: Aggregates biometric/demographic updates vs enrolments.
 Z-Score Anomaly Detection: Identifies statistical outliers (|Z| > 2.5).
 Rule-Based Classification: Dynamic three-tier system (RED/YELLOW/GREEN).
+---
+
+
 
 👥 Team & Acknowledgments
 Hackathon: UIDAI Innovation Challenge 2026
@@ -112,10 +122,15 @@ Category: Data Analytics & Predictive Modeling
 Shaikh Mohammad Tohid - Lead Software Engineer & Data Analyst 
 
 Solanki Rushikumar - Research & Documentation Lead
+---
+
 
 
 📧 Contact
+
 📧 Email: [shaikhtohid921@gmail.com]
+---
 
 
 ⭐ Star This Repository if you find this project useful for data-driven governance!
+---
