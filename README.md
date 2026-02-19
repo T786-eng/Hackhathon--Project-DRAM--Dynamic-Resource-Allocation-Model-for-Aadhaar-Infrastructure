@@ -71,6 +71,8 @@ project-dram/
       • YELLOW (Hybrid): 717 districts
 ```
 
+
+---
 ## 🚀 Usage & Deployment
 
 ### 1. Data Preparation
@@ -92,12 +94,14 @@ python main.py
 streamlit run app.py
 
 
+---
 ## 🔧 Technical Details
 
 * **Runtime**: Python 3.11+
 * **Core Engine**: Pandas, NumPy, SciPy (Z-score calculation)
 * **Visualizations**: Plotly (Sunburst & Interactive Scatter), Seaborn
 * **UI Architecture**: Streamlit (2026 Width-Stretch UI Architecture)
+---
 
 
 ## 🧠 Key Algorithms & Logic
@@ -107,6 +111,7 @@ streamlit run app.py
 * **Rule-Based Classification**: Implements a dynamic three-tier system (**RED**, **YELLOW**, **GREEN**) to categorize districts for strategic resource allocation.
 
 ---
+
 
 ## 👥 Team & Acknowledgments
 
