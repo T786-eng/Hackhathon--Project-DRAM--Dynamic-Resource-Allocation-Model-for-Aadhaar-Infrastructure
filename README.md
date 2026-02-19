@@ -112,8 +112,8 @@ streamlit run app.py
 
 * **Hackathon**: UIDAI Innovation Challenge 2026
 * **Category**: Data Analytics & Predictive Modeling
-* **Shaikh Mohammad Tohid**: Lead Software Engineer & Data Analyst ([shaikhtohid921@gmail.com](mailto:shaikhtohid921@gmail.com))
-* **Solanki Rushikumar**: Research & Documentation Lead
+* **Shaikh Mohammad Tohid**: Lead Software Engineer & Data Analyst  -- [shaikhtohid921@gmail.com]
+* **Solanki Rushikumar**: Research & Documentation Lead -- [solankirushi75@gmail.com]
 
 ---
 
