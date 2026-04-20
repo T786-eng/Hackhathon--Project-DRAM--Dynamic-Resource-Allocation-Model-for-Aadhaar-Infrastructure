@@ -21,17 +21,41 @@ st.set_page_config(
 # Professional CSS for Component Isolation
 st.markdown("""
     <style>
+    /* Consistent light blue card for all themes */
     .stMetric {
-        background-color: #222c36;  /* much darker background */
-        color: #f8f9fa !important;  /* force light text */
-        padding: 15px;
-        border-radius: 10px;
-        border-left: 5px solid #1f77b4;
+        background: #e3f0fc;
+        color: #23272f !important;
+        padding: 18px 15px 15px 15px;
+        border-radius: 14px;
+        border-left: 6px solid #1976d2;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        margin-bottom: 8px;
+        transition: background 0.2s, color 0.2s;
+    }
+    [data-testid="stMetricLabel"] {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1976d2 !important;
+        letter-spacing: 0.5px;
+        transition: color 0.2s;
     }
     [data-testid="stMetricValue"] {
-        font-size: 1.8rem;
+        font-size: 2.1rem;
         font-weight: bold;
-        color: #f8f9fa !important;  /* force light text for metric value */
+        color: #23272f !important;
+        margin-bottom: 6px;
+        transition: color 0.2s;
+    }
+    .badge-custom {
+        display: inline-block;
+        padding: 2px 12px;
+        border-radius: 12px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-left: 8px;
+        vertical-align: middle;
+        background: #1976d2;
+        color: #fff;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -78,12 +102,39 @@ filtered_df = render_sidebar(df)
 st.title("📊 Project DRAM | Resource Allocation Engine")
 st.markdown("##### *Dynamic Infrastructure Analysis for UIDAI Scalability*")
 
-# Metrics Layer
+
+# Metrics Layer: all blocks with light blue background
 k1, k2, k3, k4 = st.columns(4)
-k1.metric("Analytical Scope", f"{len(filtered_df)} Districts")
-k2.metric("Critical Nodes", len(filtered_df[filtered_df['Zone_Strategy'].str.contains('RED')]), delta="High Priority", delta_color="inverse")
-k3.metric("System UER", f"{summary['Average_UER'].iloc[0]:.2f}", help="Updates-to-Enrolment Ratio")
-k4.metric("Transition Forecast", int(summary['Districts_Expected_to_Transition'].iloc[0]), delta="Predicted")
+k1.markdown(f"""
+    <div class='stMetric'>
+        <div data-testid='stMetricLabel'>Analytical Scope</div>
+        <div data-testid='stMetricValue'>{len(filtered_df)} Districts</div>
+    </div>
+    """, unsafe_allow_html=True)
+k2.markdown(f"""
+    <div class='stMetric'>
+        <div style='display: flex; align-items: center;'>
+            <span data-testid='stMetricValue'>{len(filtered_df[filtered_df['Zone_Strategy'].str.contains('RED')])}</span>
+            <span class='badge-custom'>High Priority</span>
+        </div>
+        <div data-testid='stMetricLabel'>Critical Nodes</div>
+    </div>
+    """, unsafe_allow_html=True)
+k3.markdown(f"""
+    <div class='stMetric'>
+        <div data-testid='stMetricLabel'>System UER <span title='Updates-to-Enrolment Ratio' style='cursor: help;'>?</span></div>
+        <div data-testid='stMetricValue'>{summary['Average_UER'].iloc[0]:.2f}</div>
+    </div>
+    """, unsafe_allow_html=True)
+k4.markdown(f"""
+    <div class='stMetric'>
+        <div style='display: flex; align-items: center;'>
+            <span data-testid='stMetricValue'>{int(summary['Districts_Expected_to_Transition'].iloc[0])}</span>
+            <span class='badge-custom'>Predicted</span>
+        </div>
+        <div data-testid='stMetricLabel'>Transition Forecast</div>
+    </div>
+    """, unsafe_allow_html=True)
 
 st.divider()
 
