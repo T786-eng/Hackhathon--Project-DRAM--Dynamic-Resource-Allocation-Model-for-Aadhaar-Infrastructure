@@ -6,6 +6,7 @@ import os
 from scipy import stats
 import numpy as np
 
+
 def run_project_dram():
     print("=" * 70)
     print("   PROJECT DRAM v2.0 - Dynamic Resource Allocation Model")
