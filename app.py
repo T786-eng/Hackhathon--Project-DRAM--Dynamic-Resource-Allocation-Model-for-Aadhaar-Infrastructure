@@ -87,8 +87,8 @@ with col_l:
         color='Zone_Strategy', color_discrete_map=ZONE_COLORS,
         template="plotly_white"
     )
-    # Use container width to ensure consistent rendering across browsers
-    st.plotly_chart(fig_sun, use_container_width=True)
+    # Use Streamlit width API ('stretch' for full-width) to avoid deprecation warnings
+    st.plotly_chart(fig_sun, width='stretch')
     
     with st.expander("🔍 View Hierarchy Logic"):
         st.write("""
@@ -104,8 +104,8 @@ with col_r:
         hover_name="district", size="UER", log_x=True, log_y=True,
         color_discrete_map=ZONE_COLORS, template="plotly_white"
     )
-    # Use container width to ensure consistent rendering across browsers
-    st.plotly_chart(fig_scatter, use_container_width=True)
+    # Use Streamlit width API ('stretch' for full-width) to avoid deprecation warnings
+    st.plotly_chart(fig_scatter, width='stretch')
     
     with st.expander("🔍 View Saturation Logic"):
         st.write("""
@@ -124,6 +124,6 @@ st.dataframe(
         "Zone_Strategy": "Deployment Strategy",
         "Predicted_Trajectory": "Forecasted Trajectory"
     },
-    use_container_width=True,
+    width='stretch',
     hide_index=True
 )

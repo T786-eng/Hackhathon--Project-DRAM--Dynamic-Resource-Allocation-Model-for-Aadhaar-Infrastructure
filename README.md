@@ -95,6 +95,13 @@ python main.py
 streamlit run app.py
 ```
 
+Alternatively on Windows you can use the included helper scripts which start Streamlit and open Chrome automatically:
+
+```
+run_app.bat    # Double-click or run from PowerShell/CMD
+.\run_app.ps1  # Run from PowerShell (may need execution policy)
+```
+
 
 ---
 ## 🔧 Technical Details
