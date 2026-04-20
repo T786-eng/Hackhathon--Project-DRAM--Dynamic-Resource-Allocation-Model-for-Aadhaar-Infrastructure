@@ -21,8 +21,18 @@ st.set_page_config(
 # Professional CSS for Component Isolation
 st.markdown("""
     <style>
-    .stMetric { background-color: #f8f9fa; padding: 15px; border-radius: 10px; border-left: 5px solid #1f77b4; }
-    [data-testid="stMetricValue"] { font-size: 1.8rem; font-weight: bold; }
+    .stMetric {
+        background-color: #222c36;  /* much darker background */
+        color: #f8f9fa !important;  /* force light text */
+        padding: 15px;
+        border-radius: 10px;
+        border-left: 5px solid #1f77b4;
+    }
+    [data-testid="stMetricValue"] {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #f8f9fa !important;  /* force light text for metric value */
+    }
     </style>
     """, unsafe_allow_html=True)
 
